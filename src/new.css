@@ -1,0 +1,20 @@
+.grub {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.grub2 h1 {
+    text-align: center;
+}
+
+.grub2 button {
+    width: 500px;
+}
+
+.hide {
+    display: none;
+}
+
