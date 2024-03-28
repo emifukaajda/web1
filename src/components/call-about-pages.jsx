@@ -13,10 +13,28 @@ import CardTitle  from 'react-bootstrap/CardTitle';
 import CardText from 'react-bootstrap/CardText';
 import Footer from 'react-bootstrap/CardFooter'
 import Spinner  from 'react-bootstrap/Spinner';
+import { useState } from 'react';
 
 
 
 function NavScrollExample() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+
+  const data = ["Febry", "About"]
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value)
+  };
+
+
+
+  const handleSearchClick = () => {
+    const results = data.filter(item => 
+      item.toLowerCase(). includes(searchTerm.toLocaleLowerCase)
+      );
+      setSearchResults(results)
+    }
+
 
 
   return (
@@ -32,8 +50,8 @@ function NavScrollExample() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#about">About</Nav.Link>
-            <Nav.Link href="#action2">Contact</Nav.Link>
+            <Nav.Link href="/todolist">To-dolist</Nav.Link>
+            <Nav.Link href="#team">Team</Nav.Link>
             <NavDropdown title="News" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Terupdate</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
@@ -54,15 +72,23 @@ function NavScrollExample() {
               placeholder="Search"
               className="me-2"
               aria-label="Search"
+              value={searchTerm}
+              onChange={handleSearchChange}
             />
-            <Button variant="outline-success">Search</Button>
+            <Button variant="outline-success" onclick={handleSearchClick}>Search</Button>
+            <ul>
+        {searchResults.map((result, index) => (
+          <li key={index}>{result}</li>
+        ))}
+      </ul>
+          
           </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>
 
     {/* Main Area */}
-  <div className='center' href="#about">
+  <div className='center' href="#about" id="about">
     <Container md=''>
     <Row xs={1} md={3} lg={10}>
         <Col xs={{ order: 'First' }}>
@@ -91,7 +117,7 @@ function NavScrollExample() {
     {/* Team */}
 
           <Container>
-          <div className="team-update">
+          <div className="team-update" id="team">
           <h1 className='text-center'>Team</h1>
           <br />
   

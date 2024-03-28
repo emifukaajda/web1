@@ -1,0 +1,77 @@
+.header-logo h1 {
+    text-align: center;
+    padding: 1rem;
+}
+
+.llist-update {
+    padding: 1rem;
+}
+
+.llist-update, ul, li {
+    padding: 1rem;
+    
+}
+
+.header-logo {
+    margin: 1rem;
+}
+
+.llist-update button {
+    position: relative;
+    left: 2rem;
+}
+
+.card-footer {
+    background-color: black;
+    
+}
+
+.white {
+    color: aliceblue;
+}
+
+.footer-icon {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-icon span {
+    margin: 1px;
+}
+
+.area-card-footer {
+    position: absolute;
+}
+
+::placeholder {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+ .facebookIcon h1 {
+     font-size: 13px;
+     position: relative;
+     left: -2rem;
+     padding-top: 1rem;
+}
+
+
+.instagramIcon h1 {
+    font-size: 13px;
+    position: relative;
+    left: -2rem;
+    padding: auto;
+    margin: auto;
+}
+
+
+
+.facebookIcon h1 {
+    font-size: 13px;
+    position: relative;
+    left: -2rem;
+    padding-top: 1rem;
+}
